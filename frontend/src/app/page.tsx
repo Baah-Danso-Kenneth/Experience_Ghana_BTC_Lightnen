@@ -1,8 +1,12 @@
-import HomePage from '@/components/sections/homePage'
+import LandingPage from '@/components/sections/landingpage'
 import React from 'react'
 
+
 function Page() {
-  return <HomePage/>
+  return (
+    <div>Welcome</div>
+  )
+
 }
 
 export default Page
