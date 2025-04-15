@@ -1,12 +1,8 @@
-import LandingPage from '@/components/sections/landingpage'
-import React from 'react'
+import DefaultPage from '@/components/section/defaultPage'
 
 
 function Page() {
-  return (
-    <div>Welcome</div>
-  )
-
+  return <DefaultPage/>
 }
 
 export default Page
