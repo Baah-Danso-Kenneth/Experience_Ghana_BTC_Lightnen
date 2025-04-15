@@ -49,7 +49,9 @@ export default function RootLayout({
     <html lang="en">
 <body
   className={`${poppins.variable} ${polt_waski.variable} ${outfit.variable} 
-  ${bowlby.variable} ${dmMono.variable} font-outfit antialiased text-warmSand`}
+  ${bowlby.variable} 
+  ${dmMono.variable} 
+  font-outfit antialiased text-softCharcoal bg-[#F3F0E7]`}
 >
   {children}
 </body>
