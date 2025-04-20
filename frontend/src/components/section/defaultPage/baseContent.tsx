@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 function BaseContent() {
     return (
       <div className="h-screen px-10 mt-10">
-        <div className="flex h-full gap-5 ">
+        <div className="flex h-full  ">
 
           <div className="flex-1 border border-black border-dashed border-t-0 border-l-0 relative">
               <div className='h-[20vh]'>
@@ -37,7 +37,7 @@ function BaseContent() {
               </div>
           </div>
 
-          <div className="flex-1 border border-black relative border-dashed border-r-0 border-b-0">
+          <div className="flex-1 border border-black relative border-dashed border-r-0 border-b-0 border-l-0">
                 <div className='w-full'>
                 <Image src='/images/sunset.jpg' className='w-full ' alt="" width={500} height={500}/>
               </div>

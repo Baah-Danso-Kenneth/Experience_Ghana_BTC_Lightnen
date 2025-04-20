@@ -51,7 +51,8 @@ export default function RootLayout({
   className={`${poppins.variable} ${polt_waski.variable} ${outfit.variable} 
   ${bowlby.variable} 
   ${dmMono.variable} 
-  font-outfit antialiased text-softCharcoal bg-[#F3F0E7]`}
+  ${play_flaire.variable}
+  font-outfit antialiased text-softCharcoal bg-[#F3F0E7] overflow-x-hidden`}
 >
   {children}
 </body>
