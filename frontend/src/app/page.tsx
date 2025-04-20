@@ -1,8 +1,8 @@
-import HomePage from '@/components/sections/homePage'
-import React from 'react'
+import DefaultPage from '@/components/section/defaultPage'
+
 
 function Page() {
-  return <HomePage/>
+  return <DefaultPage/>
 }
 
 export default Page

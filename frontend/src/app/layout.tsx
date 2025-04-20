@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import localFont from 'next/font/local'
 import "./globals.css";
-import Header from "@/components/layouts/Header";
-
 
 
 const bowlby = localFont({
@@ -10,19 +8,36 @@ const bowlby = localFont({
   variable: '--font-bowlby'
 })
 
+
+const poppins = localFont({
+  src: '../../public/fonts/Poppins-Regular.ttf',
+  variable: '--font-poppins'
+})
+
 const dmMono = localFont({
   src: '../../public/fonts/DMMono-Regular.ttf',
   variable: '--font-dmMono'
 })
 
-const playWright = localFont({
-  src: '../../public/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf',
-  variable: '--font-playWright'
+const outfit = localFont({
+  src: '../../public/fonts/Outfit-Regular.ttf',
+  variable: '--font-outfit'
 })
 
+const play_flaire = localFont({
+  src: '../../public/fonts/PlayfairDisplay-Medium.ttf',
+  variable: '--font-play_flaire'
+})
+
+const polt_waski = localFont({
+  src: '../../public/fonts/PoltawskiNowy-MediumItalic.ttf',
+  variable: '--font-polt_waski'
+})
+
+
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Career Portfolio",
+  title: "Explore Ghana",
+  description: "Welcome to the gate way of Africa",
 };
 
 export default function RootLayout({
@@ -32,12 +47,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${bowlby.variable} ${dmMono.variable} ${playWright.variable} antialiased overflow-x-hidden bg-base-color text-white-color`}
-      >
-          <Header/>
-            {children}
-      </body>
+<body
+  className={`${poppins.variable} ${polt_waski.variable} ${outfit.variable} 
+  ${bowlby.variable} 
+  ${dmMono.variable} 
+  ${play_flaire.variable}
+  font-outfit antialiased text-softCharcoal bg-[#F3F0E7] overflow-x-hidden`}
+>
+  {children}
+</body>
+
     </html>
   );
 }
