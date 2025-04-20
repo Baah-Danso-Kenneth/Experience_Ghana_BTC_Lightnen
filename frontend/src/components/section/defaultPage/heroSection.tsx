@@ -7,7 +7,7 @@ function HeroSection() {
     <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: "url('/images/sunset.jpg')" }}>
      {/* <div className="absolute inset-0 z-10" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }} />      */}
     <Header/>
-       <h1 className='font-polt_waski text-center text-white capitalize text-[8em]'>Explore ghana</h1>
+       <h1 className='font-play_flaire text-center text-white capitalize text-[8em]'>Explore ghana</h1>
        <div className='relative'>
         <div className='absolute right-[30%] space-y-10'>
           <p className='w-80 '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae accusantium architecto at mollitia eum quis molestias delectus debitis deleniti officia 

@@ -4,6 +4,9 @@ import React from 'react'
 import HeroSection from './heroSection'
 import BaseContent from './baseContent'
 import Unmatched from './unmatched'
+import Discover from './discover'
+import VisitGhana from './visitGhana'
+import BestPrice from './bestPrice'
 
 function DefaultPage() {
   return (
@@ -11,6 +14,9 @@ function DefaultPage() {
        <HeroSection/>
        <BaseContent/>
        <Unmatched/>
+       <Discover/>
+       <VisitGhana/>
+       <BestPrice/>
       <Footer/>
     </div>
   )
