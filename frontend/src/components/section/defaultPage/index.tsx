@@ -6,7 +6,6 @@ import HeroSection from './heroSection'
 function DefaultPage() {
   return (
     <div>
-      <Header/>
        <HeroSection/>
       <Footer/>
     </div>
