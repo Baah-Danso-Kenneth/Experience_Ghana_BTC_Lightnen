@@ -1,0 +1,24 @@
+import { ShopItemsProps } from '@/types/regular'
+import Image from 'next/image'
+import React from 'react'
+
+function ShopItem({title,price,description, image}:ShopItemsProps) {
+  return (
+        <div className='w-[350px]'>
+        <div className='relative'>
+            <Image src={image} alt='shop-item' className='w-[350px] h-[350px] object-cover' width={500} height={500}/>
+            <div className="absolute inset-0 bg-black/40 z-10" />
+            <div className="absolute inset-0 z-20 flex items-center justify-center flex-col text-center text-white px-4">
+                    <h1>{title}</h1>
+                    <p className='text-5xl uppercase font-bowlby'>{description.slice(0,5)}</p>
+            </div>
+        </div>
+        <div className='flex items-center justify-center flex-col space-y-3 mt-3 font-play_flaire'>
+            <h1 className='text-[20px] capitalize '>{description}</h1>
+            <p>{price} sats</p>
+        </div>
+      </div>
+  )
+}
+
+export default ShopItem
