@@ -1,4 +1,6 @@
+import ShopItem from '@/components/section/shopPage/shopItem'
 import { Button } from '@/components/ui/button'
+import { shopItemsContent } from '@/lib/data'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -70,18 +72,42 @@ function ItemDetail() {
             <h2 className='text-lg font-semibold mb-2 font-play_flaire'>Quantity</h2>
             <input
               type="number"
-              className="w-52 py-3 px-4 border border-black outline-none placeholder-gray-500 appearance-none"
+              className="w-24 py-3 px-4 border border-black outline-none placeholder-gray-500 appearance-none"
               placeholder="Enter number"
             />
           </div>
 
           {/* Buy Button */}
           <div>
-            <Button className='w-52 py-4 text-lg uppercase rounded-none bg-green-700'>Buy</Button>
+            <Button className='w-[50%] py-4 text-lg uppercase rounded-none bg-green-700'>Buy</Button>
           </div>
         </div>
       </div>
-    </div>
+
+
+      <div className='py-20'>
+         <div>
+             <h1 className='uppercase text-3xl font-play_flaire'>you might also like</h1>
+          </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20 p-5">
+          {shopItemsContent.slice(0,6).map(({ title, image, description, price, category,info }, index) => (
+            <ShopItem
+              key={index}
+              title={title}
+              image={image}
+              description={description}
+              price={price}
+              info={info}
+              category={category}
+            />
+          ))}
+        </div>
+
+
+      </div>
+      </div>
+
   )
 }
 

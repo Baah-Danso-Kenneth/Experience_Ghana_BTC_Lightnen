@@ -4,6 +4,7 @@ export type ShopItemsProps={
     description:string;
     price:number;
     category:string;
+    info?:boolean
 }
 
 export type TripInfoTypes={

@@ -22,15 +22,15 @@ export const shopItems=[
 ]
 
 export const shopItemsContent=[
-    {image:'/images/sunset.jpg', title:'shoe-bag', description:'ghanaian leather made bag -guide', price:3200.00, category:'bags'},
-    {image:'/images/sunset.jpg', title:'shoe-bag', description:'ghanaian leather made bag -guide', price:3200.00, category:'bags'},
-    {image:'/images/sunset.jpg', title:'shoe-bag', description:'ghanaian leather made bag -guide', price:3200.00, category:'bags'},
-    {image:'/images/sunset.jpg', title:'shoe-bag', description:'ghanaian leather made bag -guide', price:3200.00, category:'bags'},
-    {image:'/images/sunset.jpg', title:'shoe-bag', description:'ghanaian leather made bag -guide', price:3200.00, category:'bags'},
-    {image:'/images/sunset.jpg', title:'shoe-bag', description:'ghanaian leather made bag -guide', price:3200.00, category:'bags'},
-    {image:'/images/sunset.jpg', title:'shoe-bag', description:'ghanaian leather made bag -guide', price:3200.00, category:'bags'},
-    {image:'/images/sunset.jpg', title:'shoe-bag', description:'ghanaian leather made bag -guide', price:3200.00, category:'bags'},
-    {image:'/images/sunset.jpg', title:'shoe-bag', description:'ghanaian leather made bag -guide', price:3200.00, category:'bags'},
+    {image:'/images/sunset.jpg', title:'shoe-bag', description:'ghanaian leather made bag -guide', price:3200.00, category:'bags',info:true},
+    {image:'/images/sunset.jpg', title:'shoe-bag', description:'ghanaian leather made bag -guide', price:3200.00, category:'bags',info:false},
+    {image:'/images/sunset.jpg', title:'shoe-bag', description:'ghanaian leather made bag -guide', price:3200.00, category:'bags',info:false},
+    {image:'/images/sunset.jpg', title:'shoe-bag', description:'ghanaian leather made bag -guide', price:3200.00, category:'bags',info:false},
+    {image:'/images/sunset.jpg', title:'shoe-bag', description:'ghanaian leather made bag -guide', price:3200.00, category:'bags',info:false},
+    {image:'/images/sunset.jpg', title:'shoe-bag', description:'ghanaian leather made bag -guide', price:3200.00, category:'bags',info:false},
+    {image:'/images/sunset.jpg', title:'shoe-bag', description:'ghanaian leather made bag -guide', price:3200.00, category:'bags',info:false},
+    {image:'/images/sunset.jpg', title:'shoe-bag', description:'ghanaian leather made bag -guide', price:3200.00, category:'bags',info:true},
+    {image:'/images/sunset.jpg', title:'shoe-bag', description:'ghanaian leather made bag -guide', price:3200.00, category:'bags',info:true},
 ]
 
 export const outTro=[
