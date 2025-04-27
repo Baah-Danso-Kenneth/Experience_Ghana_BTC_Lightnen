@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function HeroSection() {
+export function HeroSection({title}:{title:string}) {
     return (
       <div
         className="relative h-[50vh] bg-cover bg-center"
@@ -9,7 +9,7 @@ export function HeroSection() {
         {/* Overlay text centered both vertically and horizontally */}
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-white text-5xl md:text-8xl capitalize text-center">
-            Abri Botanica Gardens
+            {title}
           </h1>
         </div>
       </div>
