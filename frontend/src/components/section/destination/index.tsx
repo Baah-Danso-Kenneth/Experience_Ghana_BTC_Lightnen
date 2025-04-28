@@ -20,9 +20,9 @@ function Destination({experience}: { experience:AllExperienceProps}) {
     <div>
       <HeroSection title={experience.title}/>
       <Location place_name={experience.place_name} description={experience.description}/>
-      <TripInfo/>
+      <TripInfo location={experience.place_name}/>
       <HoldPlaceRecommend experienceId={experience.id}/>
-      <TenaryHolder place_name={experience.title}/>
+      <TenaryHolder place_name={experience.title} experienceId={experience.id}/>
       <InclusionHolder/>
       <SleepHolder/>
       <BestTimeHolder/>

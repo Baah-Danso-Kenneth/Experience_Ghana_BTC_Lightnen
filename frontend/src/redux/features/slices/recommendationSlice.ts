@@ -1,7 +1,6 @@
-import { fetchAllRecommendations } from '@/app/api/recommendationApi'
 import { RecommendationProps } from '@/types/regular'
 import { RecommendationState } from '@/types/state'
-import {createSlice, createAsyncThunk, isRejectedWithValue, PayloadAction} from '@reduxjs/toolkit'
+import {createSlice,  PayloadAction} from '@reduxjs/toolkit'
 
 const initialState: RecommendationState={
     recommendations: [],

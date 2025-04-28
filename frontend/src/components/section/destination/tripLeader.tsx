@@ -12,8 +12,8 @@ function TripLeader({image,name}: Guide){
             <h1 className='text-5xl uppercase font-play_flaire'>meet your trip leader</h1>
          </div>
 
-         <div className='w-[500px] h-[500px] rounded-full'>
-            <Image src={image ?image: defaultImage} width={500}  alt="guide" className='w-[500px] h-[500px] rounded-full object-cover' height={500}/>
+         <div className='w-[350px] h-[350px] rounded-full'>
+            <Image src={image ?image: defaultImage} width={500}  alt="guide" className='w-[350px] h-[350px] rounded-full object-cover' height={500}/>
          </div>
 
          <Button className='capitalize px-10 py-5 text-[15px]'>meet {" "}{name}</Button>

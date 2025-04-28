@@ -16,11 +16,12 @@ export type TripInfoTypes={
 }
 
 export type ItenaryTypes={
-    image:string;
-    day:string;
-    place:string;
+    image:string | null ;
+    day:number;
+    place:string | null;
     description: string;
     meals:boolean;
+    meal_description:string;
 }
 
 export type InclusionContentProps = {
@@ -63,3 +64,13 @@ export type InclusionContentProps = {
     experience: AllExperienceProps
   }
 
+
+  export interface ItineraryProps{
+    experience: AllExperienceProps;
+    day_number:number;
+    title:string;
+    description:string;
+    image:string | null;
+    meal_included:boolean;
+    meal_description:string;
+  }

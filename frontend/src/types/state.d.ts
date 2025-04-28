@@ -1,4 +1,4 @@
-import { AllExperienceProps, RecommendationProps } from "./regular";
+import { AllExperienceProps, ItineraryProps, RecommendationProps } from "./regular";
 
 export type ExperienceStateProps = {
     experiences: AllExperienceProps[];
@@ -8,4 +8,10 @@ export type ExperienceStateProps = {
 
 export type RecommendationState = {
     recommendations: RecommendationProps[];
+}
+
+export type ItineraryState={
+    itineraries: ItineraryProps[];
+    loading:boolean;
+    error: string | null;
 }

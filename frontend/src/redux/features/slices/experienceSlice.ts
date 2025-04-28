@@ -15,8 +15,8 @@ export const getExperiences = createAsyncThunk(
         try {
             const data = await fetchAllExperiences();
             return data;
-        } catch (error) {
-            return isRejectedWithValue(error)
+        } catch (error:any) {
+            return isRejectedWithValue(error.message || "Failed to fetch data")
         }
     }
 )
