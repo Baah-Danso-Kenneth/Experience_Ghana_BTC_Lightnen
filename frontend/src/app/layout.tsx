@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from 'next/font/local'
 import "./globals.css";
+import { Providers } from "./providers";
 
 
 const bowlby = localFont({
@@ -54,7 +55,9 @@ export default function RootLayout({
   ${play_flaire.variable}
   font-outfit antialiased text-softCharcoal bg-[#F3F0E7] overflow-x-hidden`}
 >
+  <Providers>
   {children}
+  </Providers>
 </body>
 
     </html>

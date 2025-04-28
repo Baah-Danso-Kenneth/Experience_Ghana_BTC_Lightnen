@@ -8,11 +8,17 @@ import SleepHolder from './sleepHolder'
 import TripLeader from './tripLeader'
 import BestTimeHolder from './bestTimeHolder'
 import InclusionHolder from './inclusionHolder'
+import { AllExperienceProps } from '@/types/regular'
 
-function Destination() {
+
+
+
+
+
+function Destination({location,experience}: {location:string, experience:AllExperienceProps}) {
   return (
     <div>
-      <HeroSection/>
+      <HeroSection title={experience.title}/>
       <Location/>
       <TripInfo/>
       <HoldPlaceRecommend/>
@@ -20,7 +26,14 @@ function Destination() {
       <InclusionHolder/>
       <SleepHolder/>
       <BestTimeHolder/>
-      <TripLeader image="/images/sunset.jpg" name="Paege"/>
+
+      {experience.guide && (
+  <TripLeader
+    image={experience.guide.image}
+    name={experience.guide.name || 'Awesome Guide'}
+  />
+)}
+
     </div>
   )
 }
