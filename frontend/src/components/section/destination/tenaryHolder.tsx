@@ -2,11 +2,11 @@ import { zoneItenary } from '@/lib/data'
 import React from 'react'
 import ItenaryCard from './itenaryCard'
 
-function TenaryHolder() {
+function TenaryHolder({place_name}:{place_name:string}) {
   return (
     <div className='py-10'>
         <div className='flex items-center justify-center py-10'>
-            <h1 className='font-play_flaire text-center text-5xl uppercase'>Aburi itenary</h1>
+            <h1 className='font-play_flaire text-center text-5xl uppercase'>{place_name} itenary</h1>
         </div>
 
         <div className='flex items-center flex-col justify-center mx-20'>

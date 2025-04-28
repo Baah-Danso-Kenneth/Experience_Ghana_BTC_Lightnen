@@ -57,3 +57,9 @@ export type InclusionContentProps = {
     }
   }
 
+  export type RecommendationProps = {
+    name:string;
+    message:string;
+    experience: AllExperienceProps
+  }
+

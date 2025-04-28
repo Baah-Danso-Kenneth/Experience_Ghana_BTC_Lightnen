@@ -15,14 +15,14 @@ import { AllExperienceProps } from '@/types/regular'
 
 
 
-function Destination({location,experience}: {location:string, experience:AllExperienceProps}) {
+function Destination({experience}: { experience:AllExperienceProps}) {
   return (
     <div>
       <HeroSection title={experience.title}/>
-      <Location/>
+      <Location place_name={experience.place_name} description={experience.description}/>
       <TripInfo/>
-      <HoldPlaceRecommend/>
-      <TenaryHolder/>
+      <HoldPlaceRecommend experienceId={experience.id}/>
+      <TenaryHolder place_name={experience.title}/>
       <InclusionHolder/>
       <SleepHolder/>
       <BestTimeHolder/>

@@ -36,7 +36,7 @@ export default async function Page({ params }: { params: Promise<{ location: str
   // Fetch the experience data dynamically
   const experience = await fetchExperience(decodedLocation);
 
-  return <Destination location={decodedLocation} experience={experience} />;
+  return <Destination  experience={experience} />;
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ location: string }> }): Promise<Metadata> {
