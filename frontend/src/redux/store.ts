@@ -1,10 +1,11 @@
 import {configureStore} from "@reduxjs/toolkit"
 import experienceReducer from './features/slices/experienceSlice'
-
+import recommendationReducer from './features/slices/recommendationSlice'
 
 export const store = configureStore({
     reducer: {
        experiences: experienceReducer,
+       recommendations: recommendationReducer,
     },
 })
 
