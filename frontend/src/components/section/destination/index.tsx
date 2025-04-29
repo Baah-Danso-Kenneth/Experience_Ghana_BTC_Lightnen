@@ -18,8 +18,12 @@ import { AllExperienceProps } from '@/types/regular'
 function Destination({experience}: { experience:AllExperienceProps}) {
   return (
     <div>
-      <HeroSection title={experience.title}/>
-      <Location place_name={experience.place_name} description={experience.description}/>
+      <HeroSection title={experience.title} main_image={experience.main_image}/>
+      <Location place_name={experience.place_name}
+       duration_days={experience.duration_days} duration_nights={experience.duration_nights}
+       description={experience.description}
+       />
+
       <TripInfo location={experience.place_name}/>
       <HoldPlaceRecommend experienceId={experience.id}/>
       <TenaryHolder place_name={experience.title} experienceId={experience.id}/>
