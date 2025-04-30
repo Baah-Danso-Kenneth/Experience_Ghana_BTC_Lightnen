@@ -1,14 +1,19 @@
-import axios from 'axios'
+import { setRecommendations } from '@/redux/features/slices/recommendationSlice';
+import axios from 'axios';
 
-export const fetchAllRecommendations=async()=>{
+export const fetchAllRecommendations = () => async (dispatch: any) => {
     try {
         const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/recommendations/`);
-        return response.data
+        const data = response.data;
+
+        const recommendations = data.map((rec: any) => ({
+            name: rec.person_name,
+            message: rec.message,
+            experience: rec.experience, 
+        }));
+
+        dispatch(setRecommendations(recommendations));
     } catch (error) {
-        console.error('Error fetching recommendations',error);
-        throw error;
+        console.error('Failed to fetch recommendations:', error);
     }
-
-}
-
-
+};
