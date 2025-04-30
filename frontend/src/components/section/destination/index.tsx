@@ -2,20 +2,28 @@ import React from 'react'
 import { HeroSection } from './heroSection'
 import Location from './location'
 import TripInfo from './tripInfo'
-import HoldPlaceRecommend from './holdPlaceRecommend'
+import HoldPlaceRecommend from '@/components/section/destination/holdPlaceRecommend.client';
+
 import TenaryHolder from './tenaryHolder'
-import SleepHolder from './sleepHolder'
+
+
 import TripLeader from './tripLeader'
 import BestTimeHolder from './bestTimeHolder'
 import InclusionHolder from './inclusionHolder'
-import { AllExperienceProps } from '@/types/regular'
+import { AccomodationProps, AllExperienceProps } from '@/types/regular'
+import { SleepHolder } from './sleepHolder.client';
 
 
 
 
 
 
-function Destination({experience}: { experience:AllExperienceProps}) {
+function Destination(
+  {experience,
+  accommodation}:
+      { experience:AllExperienceProps,
+        accommodation: AccomodationProps
+      }) {
   return (
     <div>
       <HeroSection title={experience.title} main_image={experience.main_image}/>
@@ -28,7 +36,11 @@ function Destination({experience}: { experience:AllExperienceProps}) {
       <HoldPlaceRecommend experienceId={experience.id}/>
       <TenaryHolder place_name={experience.title} experienceId={experience.id}/>
       <InclusionHolder/>
-      <SleepHolder/>
+      <SleepHolder 
+      image={accommodation.image}
+       name={accommodation.name} 
+       description={accommodation.description}
+        experienceId={experience.id}/>
       <BestTimeHolder/>
 
       {experience.guide && (
