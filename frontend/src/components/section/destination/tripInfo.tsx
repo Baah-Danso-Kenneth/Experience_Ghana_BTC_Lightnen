@@ -5,7 +5,7 @@ import TripInfoCard from './tripInfoCard'
 function TripInfo({location}:{location:string | null}) {
   return (
     <div className="w-full flex flex-col items-center px-5">
-      {/* Header */}
+     
       <div className='flex flex-col items-center space-y-5 max-w-4xl text-center'>
         <h1 className='text-5xl font-play_flaire uppercase'>{location} trip</h1>
         <p className='text-[20px]'>

@@ -1,5 +1,4 @@
 'use client'
-
 import { useRecommendations } from '@/hooks/useRecommendation'
 import PeopleTaught from './peopleTaught'
 
