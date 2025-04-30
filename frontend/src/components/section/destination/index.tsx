@@ -8,11 +8,11 @@ import TenaryHolder from './tenaryHolder'
 
 
 import TripLeader from './tripLeader'
-import BestTimeHolder from './bestTimeHolder'
-import InclusionHolder from './inclusionHolder'
+
 import { AccomodationProps, AllExperienceProps } from '@/types/regular'
 import { SleepHolder } from './sleepHolder.client';
-
+import {BestTimeHolder} from './bestTimeHolder.client';
+import { InclusionHolder } from './inclusionHolder.client';
 
 
 
@@ -35,14 +35,15 @@ function Destination(
       <TripInfo location={experience.place_name}/>
       <HoldPlaceRecommend experienceId={experience.id}/>
       <TenaryHolder place_name={experience.title} experienceId={experience.id}/>
-      <InclusionHolder/>
+      <InclusionHolder experienceId={experience.id}/>
       <SleepHolder 
       image={accommodation.image}
        name={accommodation.name} 
        description={accommodation.description}
         experienceId={experience.id}/>
-      <BestTimeHolder/>
 
+      <BestTimeHolder
+       experienceId={experience.id}/>
       {experience.guide && (
   <TripLeader
     image={experience.guide.image}

@@ -4,7 +4,6 @@ import { Metadata } from 'next';
 import Destination from '@/components/section/destination';
 import { AccomodationProps, AllExperienceProps } from '@/types/regular';
 import { fetchAllExperiences } from '@/app/api/experienceApi';
-import { useAccommodation } from '@/hooks/useAccommodaion';
 import { fetchAllAccommodations } from '@/app/api/accomodationApi';
 
 
