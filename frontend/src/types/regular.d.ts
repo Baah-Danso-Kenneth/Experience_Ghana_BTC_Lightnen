@@ -78,3 +78,11 @@ export type InclusionContentProps = {
   export type LocationProps = Pick<
   AllExperienceProps,
    'place_name' | 'description' | 'duration_days' | 'duration_nights'>
+
+export interface AccomodationProps{
+  experience: AllExperienceProps;
+  name:string;
+  description: string;
+  location: string;
+  image: string;
+}
