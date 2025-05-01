@@ -24,6 +24,8 @@ function Destination(
       { experience:AllExperienceProps,
         accommodation: AccomodationProps
       }) {
+        console.log("experience", experience);
+        console.log("guide", experience?.guide);
   return (
     <div>
       <HeroSection title={experience.title} main_image={experience.main_image}/>
@@ -31,6 +33,7 @@ function Destination(
        duration_days={experience.duration_days} duration_nights={experience.duration_nights}
        description={experience.description}
        />
+
 
       <TripInfo location={experience.place_name}/>
       <HoldPlaceRecommend experienceId={experience.id}/>
@@ -44,10 +47,13 @@ function Destination(
 
       <BestTimeHolder
        experienceId={experience.id}/>
+
+       
       {experience.guide && (
   <TripLeader
     image={experience.guide.image}
     name={experience.guide.name || 'Awesome Guide'}
+    id={experience.id}
   />
 )}
 

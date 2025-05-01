@@ -1,9 +1,10 @@
 import { Button } from '@/components/ui/button';
 import { Guide, TripInfoTypes } from '@/types/regular';
 import Image from 'next/image'
+import Link from 'next/link';
 import React from 'react'
 
-function TripLeader({image,name}: Guide){
+function TripLeader({image,name,id}: Guide){
     const defaultImage='/images/default-guide-image.png'
 
   return (
@@ -16,7 +17,11 @@ function TripLeader({image,name}: Guide){
             <Image src={image ?image: defaultImage} width={500}  alt="guide" className='w-[350px] h-[350px] rounded-full object-cover' height={500}/>
          </div>
 
-         <Button className='capitalize px-10 py-5 text-[15px]'>meet {" "}{name}</Button>
+        <Link href={`/tour_guide/${id}`}>
+         <Button className='capitalize px-10 py-5 text-[15px]'>
+          meet {" "}{name}
+        </Button>
+        </Link>
     </div>
   )
 }
