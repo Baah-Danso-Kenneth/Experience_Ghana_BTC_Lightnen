@@ -1,11 +1,25 @@
+
 export const navLinks=[
-    {name:'2025 trip calender',href:'/transfer'},
-    {name:'customize',href:'/contacts'},
-    {name:'shop', href:'/payment'},
-    {name:'group trips',href:'/profile'},
+    {name: '2025 trip calender',href:'/transfer'},
+    {name:'all experience',href:'/contacts'},
+    {name:'shop', href:'/shop'},
+    {name:'history',href:'/profile'},
     {name:'events',href:'/contacts'},
-    {name:'donations',href:'/contacts'},
-    {name:'festivals',href:'/contacts'},
+    {name:'about',href:'/contacts'},
+    
+]
+
+export const destinationLinks = [
+  { title: 'accra', image: '/images/GH-AA.svg' },
+  { title: 'central', image: '/images/GH-CP.svg' },
+  { title: 'western', image: '/images/GH-WP.svg' },
+  { title: 'eastern', image: '/images/GH-EP.svg' },
+  { title: 'volta', image: '/images/GH-TV.svg' },
+  { title: 'ashanti', image: '/images/GH-AH.svg' },
+  { title: 'brong-Ahafo', image: '/images/GH-BA.svg' },
+  { title: 'northen', image: '/images/GH-NP.svg' },
+  { title: 'upper East', image: '/images/GH-UE.svg' },
+  { title: 'upper West', image: '/images/GH-UW.svg' },
 ]
 
 export const shopItems=[

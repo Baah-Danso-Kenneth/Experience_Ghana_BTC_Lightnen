@@ -17,7 +17,6 @@ function DefaultPage() {
        <Discover/>
        <VisitGhana/>
        <BestPrice/>
-      <Footer/>
     </div>
   )
 }

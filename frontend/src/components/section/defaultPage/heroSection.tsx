@@ -5,8 +5,8 @@ import React from 'react'
 function HeroSection() {
   return (
     <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: "url('/images/sunset.jpg')" }}>
-     {/* <div className="absolute inset-0 z-10" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }} />      */}
-    <Header/>
+
+ 
        <h1 className='font-play_flaire text-center text-white capitalize text-[8em]'>Explore ghana</h1>
        <div className='relative'>
         <div className='absolute right-[30%] space-y-10'>
