@@ -1,33 +1,31 @@
-import Image from 'next/image'
+import { useMapContent } from '@/hooks/useMapContent'
 import React from 'react'
+import BestTimeContent from './bestTimeContent';
 
-function BestTimeHolder() {
-  return (
-    <div className='flex items-center justify-center mx-auto max-w-5xl gap-20 py-10'>
-        <div className='flex-1'>
-            <Image src="/images/GH-AH.svg" className='w-[500px] h-[500px] object-contain' alt="" width={500} height={500}/>
-        </div>
+function BestTimeHolder({experienceId}:{experienceId:number}) {
+  const {mapcontents} = useMapContent();
+  console.log("Loaded map contents:", mapcontents)
 
-        <div className='flex-1 space-y-10 place-self-start'>
-            <div>
-                <h1 className='text-[20px] font-play_flaire font-bold uppercase mb-3'>best time of year visit</h1>
-                <p className='text-[18px] text-zinc-800 font-light'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia tempore dolore sunt quidem exercitationem, deleniti dicta in voluptas magnam sit, excepturi maiores incidunt ea iste aperiam architecto. Qui id molestiae officia optio neque, iste incidunt quisquam consectetur numquam aliquid necessitatibus
-                     atque quaerat repellat exercitationem
-                      illum beatae molestias aspernatur 
-                      debitis saepe.</p>
-            </div>
+  const filteredMapContent = Array.isArray(mapcontents)
+    ? mapcontents.filter((rec) => rec.experience && rec.experience.id === experienceId)
+    : [];
 
-            <div>
-            <h1 className='text-[20px] font-play_flaire font-bold uppercase mb-3'>weather</h1>
-            <p className='text-[18px] text-zinc-800 font-light'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia tempore dolore sunt quidem exercitationem, deleniti dicta in voluptas magnam sit, excepturi maiores incidunt ea iste aperiam architecto. Qui id molestiae officia optio neque, iste incidunt quisquam consectetur numquam aliquid necessitatibus
-                     atque quaerat repellat exercitationem
-                      illum beatae molestias aspernatur 
-                      debitis saepe.</p>
-            </div>
-
-        </div>
-    </div>
-  )
+ return (
+   <div>
+     {filteredMapContent.length > 0 ? (
+        filteredMapContent.map((rec,index)=>(
+         <BestTimeContent 
+          key={index}
+          region_map={rec.region_map} 
+          best_time_title={rec.best_time_title}
+          best_time_des={rec.best_time_des} 
+          weather_time_title={rec.weather_time_title}
+          weather_time_des={rec.weather_time_des}/>
+        ))
+     ):(<div>no data</div>)}
+   </div>
+ )
 }
+
 
 export default BestTimeHolder

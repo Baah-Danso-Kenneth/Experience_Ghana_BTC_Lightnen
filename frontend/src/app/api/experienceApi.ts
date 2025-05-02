@@ -8,6 +8,6 @@ export async function fetchAllExperiences(){
 
     } catch (error) {
         console.error('Error fetching experiences',error);
-        throw error;
+        
     }
 }

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from 'next/font/local'
 import "./globals.css";
 import { Providers } from "./providers";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 
 const bowlby = localFont({
@@ -56,7 +58,9 @@ export default function RootLayout({
   font-outfit antialiased text-softCharcoal bg-[#F3F0E7] overflow-x-hidden`}
 >
   <Providers>
+    <Header/>
   {children}
+  <Footer/>
   </Providers>
 </body>
 

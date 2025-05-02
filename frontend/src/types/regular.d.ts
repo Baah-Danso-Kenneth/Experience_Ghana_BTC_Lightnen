@@ -86,3 +86,32 @@ export interface AccomodationProps{
   location: string;
   image: string;
 }
+
+export interface MapContentTypes{
+  experience: AllExperienceProps;
+  region_map:string;
+  best_time_title:string;
+  best_time_des:string;
+  weather_time_title:string;
+  weather_time_des:string;
+}
+
+export type BestTimeProps = Pick<
+  MapContentTypes, 'region_map'| 'best_time_des'|'best_time_title' | 'weather_time_des' | 'weather_time_title'
+>
+
+export interface BestTimeHolderProps {
+  experienceId: number;
+}
+
+
+export interface IncludedProps{
+  experience: AllExperienceProps;
+  text:string;
+}
+
+
+export interface EXcludedProps{
+  experience: AllExperienceProps;
+  text:string;
+}

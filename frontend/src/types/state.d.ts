@@ -1,4 +1,4 @@
-import { AccomodationProps, AllExperienceProps, ItineraryProps, RecommendationProps } from "./regular";
+import { AccomodationProps, AllExperienceProps, EXcludedProps, IncludedProps, ItineraryProps, MapContentTypes, RecommendationProps } from "./regular";
 
 export type ExperienceStateProps = {
     experiences: AllExperienceProps[];
@@ -20,4 +20,22 @@ export type AccommodationState={
     accommodations: AccomodationProps[];
     loading:boolean;
     error: string | null;
+}
+
+export type MapContentState={
+    mapcontents: MapContentTypes[];
+    loading:boolean;
+    error: string | null;
+}
+
+export type IncludedState={
+    includedItems: IncludedProps[];
+    loading:boolean;
+    error: string | null
+}
+
+export type ExcludedState={
+    excludedItems: EXcludedProps[];
+    loading:boolean;
+    error: string | null
 }
