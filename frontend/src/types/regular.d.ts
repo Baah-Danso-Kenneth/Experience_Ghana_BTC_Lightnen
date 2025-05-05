@@ -115,3 +115,33 @@ export interface EXcludedProps{
   experience: AllExperienceProps;
   text:string;
 }
+
+export interface ProductCategoryTypes{
+  name:string;
+  slug:string;
+  description:string;
+  image:string;
+}
+
+export interface ProductTypes{
+  category:ProductCategoryTypes;
+  name:string;
+  slug:string;
+  price_in_sats:number;
+  is_active:boolean;
+  stock_quantity:number;
+  description:string;
+  image:string;
+}
+
+
+export interface ProductImageTypes{
+  product: ProductTypes;
+  image:string;
+  alt_text:string;
+  order:number;
+}
+
+export type MinimizeShopProps = Pick<
+  ProductImageTypes, 'image'|'price_in_sats'|'description'|'product'
+>
