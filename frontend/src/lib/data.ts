@@ -1,6 +1,6 @@
 
 export const navLinks=[
-    {name: '2025 trip calender',href:'/transfer'},
+    {name: '2025 trip calender',href:'/calender'},
     {name:'all experience',href:'/contacts'},
     {name:'shop', href:'/shop'},
     {name:'history',href:'/profile'},
