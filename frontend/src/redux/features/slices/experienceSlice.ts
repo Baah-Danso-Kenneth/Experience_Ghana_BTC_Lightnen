@@ -1,7 +1,7 @@
 import {createSlice, createAsyncThunk, isRejectedWithValue} from "@reduxjs/toolkit"
 import { fetchAllExperiences } from "@/app/api/experienceApi"
 import { ExperienceStateProps } from "@/types/state"
-import { access } from "fs"
+
 
 const initialState: ExperienceStateProps = {
     experiences: [],

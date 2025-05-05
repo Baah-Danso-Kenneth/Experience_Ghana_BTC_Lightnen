@@ -6,7 +6,8 @@ import accommodationReducer from './features/slices/accommodationSlice'
 import mapContentReducer from './features/slices/mapConentSlice'
 import includedItemReducer from './features/slices/inclusionSlice'
 import excludedItemReducer from './features/slices/exclusionSlice'
-
+import shopItemReducer from './features/slices/shopSlice'
+import categoryReducer from './features/slices/categorySlice'
 
 
 
@@ -18,7 +19,9 @@ export const store = configureStore({
        accommodations: accommodationReducer,
        mapcontents: mapContentReducer,
        includedItems:includedItemReducer,
-       excludedItems: excludedItemReducer
+       excludedItems: excludedItemReducer,
+       shopItems:shopItemReducer,
+       categoryItems: categoryReducer,
     },
 })
 
