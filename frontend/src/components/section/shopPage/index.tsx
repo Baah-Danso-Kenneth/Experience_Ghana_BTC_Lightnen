@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import ShopContainer from './shopContainer'
 import ShopItemsHeader from './shopItemsHeader'

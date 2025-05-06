@@ -1,9 +1,23 @@
+'use client'
 import { Button } from '@/components/ui/button'
+import { useCategories } from '@/hooks/useCategory'
 import { shopItems } from '@/lib/data'
-import Link from 'next/link'
-import React from 'react'
+import { setCategory } from '@/redux/features/slices/categorySlice'
+import { getAllItems } from '@/redux/features/slices/shopSlice'
+
+import clsx from 'clsx'
+
+import { useDispatch } from 'react-redux'
+
 
 function ShopItemsHeader() {
+    const {selected, categories,loading} = useCategories()
+    const dispatch = useDispatch()
+
+    const handleClick=(slug:string)=>{
+        dispatch(setCategory(slug))
+    }
+
   return (
     <div>
         <div className='flex items-center justify-center p-10'>
@@ -11,9 +25,21 @@ function ShopItemsHeader() {
         </div>
 
         <div className='flex space-x-5 items-center justify-center'>
-            {shopItems.map(({name, query},index)=>(
-                <Link key={index} href={query} className='border px-5 text-nowrap uppercase border-black bg-transparent p-2 rounded-[10px]'>{name}</Link>
-            ))}
+            <Button
+              className={clsx(selected === 'all' ? 'default' : 'outline')}
+              onClick={()=>handleClick('all')}
+            >
+                All
+            </Button>
+            
+            {
+                categories.map(({name, slug},index)=>(
+                    <Button key={index} className='border px-5 text-nowrap hover:text-white uppercase text-black border-black bg-transparent p-2 rounded-[10px]'>
+                        {name}
+                    </Button>
+                ))
+            }
+
         </div>
      </div>
   )
