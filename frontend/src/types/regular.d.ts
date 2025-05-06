@@ -124,6 +124,7 @@ export interface ProductCategoryTypes{
 }
 
 export interface ProductTypes{
+  id?:number;
   category:ProductCategoryTypes;
   name:string;
   slug:string;
@@ -145,3 +146,15 @@ export interface ProductImageTypes{
 export type MinimizeShopProps = Pick<
   ProductImageTypes, 'image'|'price_in_sats'|'description'|'product'
 >
+
+export interface ProductDetailProps{
+  product: ProductTypes;
+  image:string;
+}
+
+export interface ShopItemProps{
+  image:string;
+  description:string;
+  price_in_sats:number;
+  product: ProductTypes;
+}

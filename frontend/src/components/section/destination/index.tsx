@@ -3,17 +3,12 @@ import { HeroSection } from './heroSection'
 import Location from './location'
 import TripInfo from './tripInfo'
 import HoldPlaceRecommend from '@/components/section/destination/holdPlaceRecommend.client';
-
 import TenaryHolder from './tenaryHolder'
-
-
 import TripLeader from './tripLeader'
-
 import { AccomodationProps, AllExperienceProps } from '@/types/regular'
 import { SleepHolder } from './sleepHolder.client';
 import {BestTimeHolder} from './bestTimeHolder.client';
 import { InclusionHolder } from './inclusionHolder.client';
-
 
 
 
