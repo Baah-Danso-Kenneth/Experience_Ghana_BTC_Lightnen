@@ -14,11 +14,10 @@ export async function POST(request: Request) {
       );
     }
 
- 
     const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_API_URL}/orders/`,
+      `${process.env.NEXT_PUBLIC_API_URL}/create-order-invoice/`,
       {
-        product: productId,
+        product_id: productId,
         quantity: quantity,
         total_amount_sats: amountInSats,
         payment: {
@@ -29,18 +28,18 @@ export async function POST(request: Request) {
       {
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.LIGHTNING_API_KEY}`
         }
       }
     );
 
     const data = response.data;
+    console.log('Backend Respond',data)
 
     
     return NextResponse.json({
-      id: data.payment.invoice_id,
-      paymentRequest: data.payment.payment_request,
-      amountInSats: data.payment.amount_in_sats,
+      id: data.order_id,
+      paymentRequest: data.payment_request,
+      amountInSats: amountInSats,
       expiresAt: new Date(Date.now() + 900000).toISOString(), 
     });
   } catch (error: any) {
