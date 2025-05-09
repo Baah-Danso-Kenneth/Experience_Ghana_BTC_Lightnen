@@ -124,6 +124,7 @@ export interface ProductCategoryTypes{
 }
 
 export interface ProductTypes{
+  id?:number;
   category:ProductCategoryTypes;
   name:string;
   slug:string;
@@ -145,3 +146,54 @@ export interface ProductImageTypes{
 export type MinimizeShopProps = Pick<
   ProductImageTypes, 'image'|'price_in_sats'|'description'|'product'
 >
+
+export interface ProductDetailProps{
+  product: ProductTypes;
+  image:string;
+}
+
+export interface ShopItemProps{
+  image:string;
+  description:string;
+  price_in_sats:number;
+  product: ProductTypes;
+}
+
+
+export type CreateInvoiceParams = {
+  productId: string;
+  quantity: number;
+  amountInSats: number;
+};
+
+
+export type InvoiceResponse = {
+  id: string;
+  paymentRequest: string;
+  amountInSats: number;
+  expiresAt: string;
+};
+
+// Props for any button or UI component using it
+export interface LightningBuyButtonProps {
+  productId: string;
+  quantity: number;
+  amountInSats: number;
+}
+
+
+export type SubmitOrderArgs = {
+  productId: string;
+  quantity: number;
+  invoiceId: string;
+};
+
+export type PaymentConfirmationRequst = {
+  r_hash: string;
+}
+
+export interface DialogScanBoxProps {
+  paymentRequest: string
+  open: boolean
+  onOpenChange: (open: boolean) => void
+}

@@ -1,12 +1,24 @@
 import { MinimizeShopProps, ProductTypes, ShopItemsProps } from '@/types/regular'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 function ShopItem({product, image}:MinimizeShopProps) {
+  const productId=product.id
+ 
+  
   return (
+       <Link href={`/shop/details/${productId}`}>
         <div className='w-[300px]'>
         <div className='relative'>
-            <Image src={image} alt='shop-item' className='w-[300px] h-[300px] object-cover' width={500} height={500}/>
+            <Image src={image}
+             alt='shop-item'
+              className='w-[300px] h-[300px] object-cover' 
+              width={500} height={500}
+              />
+        
+
+
             {/* {info && <div className="absolute inset-0 bg-black/40 z-10" />} */}
 
             {/* {info && (
@@ -22,6 +34,7 @@ function ShopItem({product, image}:MinimizeShopProps) {
             <p>{product.price_in_sats} sats</p>
         </div>
       </div>
+      </Link>
   )
 }
 
